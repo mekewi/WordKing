@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{2E286077-DCB2-4F13-FD7D-815796424720}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/WordHandler.cs">
+    <Files>
+      <File FileName="Assets/_Scripts/Utils/WordDictionary.cs" Line="7" Column="14" />
+      <File FileName="Assets/_Scripts/GameScene/GamePlay.cs" Line="31" Column="163" />
+      <File FileName="Assets/_Scripts/SplashController.cs" Line="3" Column="19" />
+      <File FileName="Assets/_Scripts/GameScene/ActionAreaController.cs" Line="45" Column="10" />
+      <File FileName="Assets/_Scripts/AnswerManager.cs" Line="35" Column="35" />
+      <File FileName="Assets/_Scripts/BacktrackWordHandler.cs" Line="6" Column="5" />
+      <File FileName="Assets/_Scripts/WordHandler.cs" Line="12" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mohamadrashad/Documents/GitHub/WordKing/Assets/_Scripts/Utils/WordDictionary.cs" relfile="Assets/_Scripts/Utils/WordDictionary.cs" line="137" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

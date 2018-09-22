@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Name: Word Dictionary
   m_EditorClassIdentifier: 
   backtrackingWords:
-  - whole
-  - who
-  - how
-  - hole
-  - low
+  - truck
+  - cut
+  AnsweredWord: {fileID: 1033992256056734, guid: 359a3534ecf214a678a6e072afb0f954,
+    type: 2}
   wordLength: 5
-  realWord: whole
-  currentWord: lewho
+  realWord: truck
+  SelectedWord: []
+  ValidWords:
+  - still
+  - chief
+  mousDown: 0
+  buttonsPosition: []
+  currentWord: uctkr

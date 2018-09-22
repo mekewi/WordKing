@@ -11,10 +11,14 @@ public class WordDictionary : ScriptableObject {
     public Dictionary<int, List<string>> allWords;
     public List<string> backtrackingWords;
     public Dictionary<int, List<string>> wordsByLength;
+    public GameObject AnsweredWord;
     [Range(3,8)]
     public int wordLength = 0;
     public string realWord;
-
+    public List<string> SelectedWord;
+    public List<string> ValidWords;
+    public bool mousDown;
+    public List<Vector3> buttonsPosition;
     public string currentWord;
     public void Raise(){
         for (int i = listeners.Count-1; i >=0 ; i--)
@@ -189,5 +193,28 @@ public class WordDictionary : ScriptableObject {
 
 		return result;
 	}
-
+    public void onSelectedWord(string word,Vector3 position){
+        if (mousDown)
+        {
+            Debug.Log("result >>>>>> " + word);
+            SelectedWord.Add(word);
+            buttonsPosition.Add(position);
+        }
+    }
+    public void validateWord(){
+        string ss = "";
+        for (int i = 0; i < SelectedWord.Count; i++)
+        {
+            ss += SelectedWord[i];
+        }
+        Debug.Log("result >>>>>> " + ss);
+        bool isValid = backtrackingWords.Contains(ss);
+        if (isValid)
+        {
+            ValidWords.Add(ss);
+        }
+        Debug.Log("result >>>>>> " + ss+ "   >>>>  " + isValid);
+        buttonsPosition.Clear();
+        SelectedWord.Clear();
+    }
 }

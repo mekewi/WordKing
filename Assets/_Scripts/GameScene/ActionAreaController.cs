@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ActionAreaController : MonoBehaviour {
 
     private float numPoints;
-
     public float NumPoints
     {
         get
@@ -26,6 +25,7 @@ public class ActionAreaController : MonoBehaviour {
         DrowButtons();
     }	
     public void DrowButtons(){
+
         for (int pointNum = 0; pointNum < NumPoints; pointNum++)
         {
             // "i" now represents the progress around the circle from 0-1
@@ -38,8 +38,10 @@ public class ActionAreaController : MonoBehaviour {
             var y = Mathf.Cos(angle) * radiusY;
             Vector3 pos = new Vector3(x, y, 0) + centrePos;
             // no need to assign the instance to a variable unless you're using it afterwards:
-            Text ButtonText = Instantiate(beadPrefab, pos, Quaternion.identity, this.transform).GetComponentInChildren<Text>();
-            ButtonText.text = wordDictionary.currentWord[pointNum].ToString();
+            BacktrackWordHandler ButtonObject = Instantiate(beadPrefab, pos, Quaternion.identity, this.transform).GetComponent<BacktrackWordHandler>();
+            Text buttonText = ButtonObject.gameObject.GetComponentInChildren<Text>();
+            buttonText.text = wordDictionary.currentWord[pointNum].ToString();
+            ButtonObject.myWord = buttonText.text;
         }
     }
 	// Update is called once per frame
